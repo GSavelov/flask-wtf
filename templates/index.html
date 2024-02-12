@@ -2,4 +2,11 @@
 
 {% block content %}
 <h4>И на Марсе будут яблони цвести</h4>
+{% if 'строитель' in prof or 'инженер' in prof %}
+<h2>Инженерные тренажеры</h2>
+<img src="https://sportsgoods.ru/image/catalog/demo/product/body-solid/g3s/g3s.jpg">
+{% else %}
+<h2>Научные симуляторы</h2>
+<img src="https://mmo13.ru/download/content/201808/25/15/image_5b8145ef751f43.26945624.jpg">
+{% endif %}
 {% endblock %}

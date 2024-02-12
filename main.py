@@ -19,5 +19,22 @@ def list_prof(list):
     return render_template('index.html', list=list, title="Тренировка")
 
 
+@app.route('/answer')
+@app.route('/auto_answer')
+def auto_answer():
+    params = {
+        "title": 'Анкета',
+        "surname": 'Ватный',
+        "name": 'Марк',
+        "education": 'выше среднего',
+        "profession": 'штурман марсохода',
+        "sex": 'мужчина',
+        "motivation": 'Всегда мечтал застрять на Марсе',
+        "ready": 'Готов'
+    }
+
+    return render_template('auto_answer.html', **params)
+
+
 if __name__ == '__main__':
     app.run(port=8080)
